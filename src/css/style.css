@@ -1,1 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fbf8f3;
+    font-family: "Inter", sans-serif;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.nav-logo {
+    color: #3180f5;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.nav-burger {
+    width: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.--open {
+    transform: rotate(45deg);
+}
+
+.nav-links {
+    font-size: 1.5rem;
+    list-style: none;
+    position: absolute;
+    height: max-content;
+    top: 90%;
+    color: #fbf8f3;
+    font-weight: 500;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #1313137d;
+    transition: .3s;
+    transform-origin: top right;
+}
+
+.nav-link {
+    padding: 1rem;
+    text-align: end;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #131313ad;
+}
+
+.nav-twitter {
+    font-size: 1rem;
+    margin: .5rem;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    background-color: #3180f5;
+    width: fit-content;
+    transition: .4s;
+}
+
+.nav-twitter:hover {
+    background-color: #296bcf;
+}
+
+.--hidden {
+    transform-origin: top right;
+    transition: .3s;
+    transform: scale(0);
+}
+
+.header-container {
+    padding: 1.5rem;
+}
+
+.header-img {
+    width: 100%;
+}
+
+.header-title {
+    margin: 3rem 0 1rem 0;
+    font-size: 1.8rem;
+}
+
+.header-paraph {
+    font-size: .95rem;
+    line-height: 1.7rem;
+    color: grey;
+}
+
+.header-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-twitter {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    background-color: #3180f5;
+    width: 100%;
+    text-align: center;
+    transition: .4s;
+    text-decoration: none;
+    color: #fbf8f3;
+}
+
+.header-twitter:hover {
+    background-color: #296bcf;
+}
+
+.header-link {
+    font-weight: 900;
+    text-decoration: none;
+    color: #296bcf;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.header-link:hover {
+    color: #3180f5
+}
+
+.header-comments {
+    margin-top: 2rem;
+}
+
+.avatars > *:not(:first-child) {
+    margin-left: -1.3rem;
+}
+
+.comments-paraph {
+    margin-top: 1rem;
+    line-height: 1.7rem;
+    color: grey;
+}
+
+.comments-paraph strong {
+    color: #3180f5;
+}

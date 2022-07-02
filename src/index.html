@@ -9,7 +9,70 @@
 </head>
 <body>
     
-    
+    <nav class="nav-container">
+        <span class="nav-logo">Chirp.</span>
+
+        <img class="nav-burger" src="../Assets/HamburgerMenu.svg" alt="Hamburger Menu SVG">
+        
+        <ul class="nav-links --hidden">
+            <li class="nav-link">Home</li>
+            <li class="nav-link">Pricing</li>
+            <li class="nav-link">FAQ</li>
+            <li class="nav-link nav-twitter">
+                <img src="../Assets/Twitter.svg" alt="Twitter SVG">
+                Sign in with Twitter
+            </li>
+        </ul>
+    </nav>
+
+    <header class="header-container">
+        <img src="../Assets/HeroImgDesktop.png" alt="Hero Image" class="header-img">
+
+        <h1 class="header-title">
+            Twitter analytics taken to a whole new level.
+        </h1>
+
+        <p class="header-paraph">
+            Chirp is a suite of Twitter analytics that will help you better understand your audience, which tweets they like, and most importantly, when they are the most active on Twitter.
+        </p>
+
+        <section class="header-buttons">
+            <a href="twitter.com" class="header-twitter">
+                <img src="../Assets/Twitter.svg" alt="Twitter SVG">
+                Sign in with Twitter
+            </a>
+
+            <a class="header-link" href="#">Learn more ➡</a>
+        </section>
+
+        <section class="header-comments">
+            <div class="avatars"></div>
+            <p class="comments-paraph">
+                Join <strong>195</strong> others who have analyzed their followers and scheduled <strong>1342</strong> tweets!
+            </p>
+        </section>
+    </header>
+
+<script>
+
+    const burger = document.querySelector(".nav-burger")
+    const hidden = document.querySelector(".nav-links")
+
+    burger.addEventListener("click", () =>{
+        burger.classList.toggle("--open");
+        hidden.classList.toggle("--hidden")
+    })
+
+    let TOTAL_AVATARS = 9;
+    const avatars = document.querySelector(".avatars")
+
+    for (let i = TOTAL_AVATARS; i >= 1; i--) {
+        const avatar = document.createElement("img");
+        avatar.src = `../Assets/userAvatar0${i}.svg`;
+        avatars.appendChild(avatar);
+    }
+
+</script>
 
 </body>
 </html>
