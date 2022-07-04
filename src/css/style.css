@@ -8,11 +8,11 @@
 }
 
 body {
-    background-color: #fbf8f3;
     font-family: "Inter", sans-serif;
 }
 
 .nav-container {
+    background-color: #fbf8f3;
     width: 100%;
     height: 100px;
     display: flex;
@@ -70,6 +70,7 @@ body {
 }
 
 .nav-twitter {
+    color: #fff;
     font-size: 1rem;
     margin: .5rem;
     border-radius: 5px;
@@ -90,7 +91,9 @@ body {
 }
 
 .header-container {
+    background-color: #fbf8f3;
     padding: 1.5rem;
+    padding-bottom: 2rem;
 }
 
 .header-img {
@@ -104,7 +107,7 @@ body {
 
 .header-paraph {
     font-size: .95rem;
-    line-height: 1.7rem;
+    line-height: 1.7em;
     color: grey;
 }
 
@@ -136,13 +139,13 @@ body {
 .header-link {
     font-weight: 900;
     text-decoration: none;
-    color: #296bcf;
+    color: #3180f5;
     font-weight: 900;
     transition: .3s;
 }
 
 .header-link:hover {
-    color: #3180f5
+    color: #296bcf;
 }
 
 .header-comments {
@@ -155,10 +158,366 @@ body {
 
 .comments-paraph {
     margin-top: 1rem;
-    line-height: 1.7rem;
+    line-height: 1.7em;
     color: grey;
 }
 
 .comments-paraph strong {
     color: #3180f5;
+}
+
+.features-container {
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.features-title {
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.features-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1.2rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.card-img {
+    font-size: 2rem;
+}
+
+.card-paraph {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.comments-container {
+    padding: 5rem 1.5rem;
+    background-color: #d7f5f5;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.comments-title {
+    font-size: 2.5rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.comment-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-header {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-areas: 
+        "img info twitter"
+        "img info twitter";
+}
+
+.comment-img {
+    width: 90%;
+    grid-area: img;
+}
+
+.comment-name {
+    margin-left: 10px;
+    align-self: flex-end;
+}
+
+.comment-user {
+    margin-left: 10px;
+}
+
+.comment-twitter {
+    grid-area: twitter;
+    justify-self: end;
+    align-self: center;
+}
+
+.comment-paraph {
+    font-size: 1.4rem;
+}
+
+.comment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-likes {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+}
+
+.plans-container {
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.plans-title {
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.plans-paraph {
+    font-size: 1.4rem;
+    max-width: 70%;
+    text-align: center;
+    color: #666;
+}
+
+.plans-card {
+    margin-top: 30px;
+    padding: 3rem 1.5rem;
+    background-color: #fbf8f3;
+    border-radius: 10px;
+    border: 1px solid #ffad23;
+}
+
+.plans-card-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.plans-card-price {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.plans-card-price small {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.plans-card hr {
+    border-color: #aaaaaa3d;
+    margin: 1rem 0;
+}
+
+.plans-card-features {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plans-card-feature {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.plans-card-feature img{
+    width: 20px;
+    align-self: flex-start;
+}
+
+.plans-twitter {
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3180f5;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.plans-twitter:hover {
+    background-color: #296bcf;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 820px) {
+    .nav-burger {
+        display: none;
+    }
+
+    .nav-links {
+        transform: scale(1);
+        position: unset;
+        background-color: unset;
+        color: #aaa;
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+    }
+
+    .nav-link {
+        width: max-content;
+    }
+
+    .nav-link:hover {
+        color: #333;
+        background-color: unset;
+    }
+
+    .nav-twitter:hover {
+        background-color: #296bcf;
+        color: #fff;
+    }
+
+    .header-img {
+        content: url("/Assets/HeroImgTablet.png");
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-paraph {
+        font-size: 1.3rem;
+    }
+
+    .header-buttons {
+        flex-direction: row;
+    }
+
+    .header-twitter {
+        width: fit-content;
+    }
+
+    .comments-paraph {
+        width: 70%;
+        font-size: 1.3rem;
+        line-height: 1.7em;
+    }
+
+    .features-title {
+        width: 60%;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-paraph {
+        font-size: 1.4rem;
+        line-height: 1.7em;
+    }
+
+    .comments-container {
+        padding-right: 0;
+    }
+
+    .comments-container .cards-container {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .comment-card {
+        height: fit-content;
+        min-width: 50%;
+    }
+
+    .plans-title {
+        font-size: 2rem;
+    }
+
+    .plans-paraph {
+        font-size: 1rem;
+        line-height: 1.7em;
+    }
+
+    .plans-card {
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .header-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "title img"
+            "paraph img"
+            "buttons img"
+            "comments img";
+        padding: 1rem 3rem;
+    }
+
+    .nav-container {
+        padding: 0 3rem;
+    }
+
+    .features-container {
+        padding: 3rem;
+    }
+
+    .comments-container {
+        padding: 3rem;
+    }
+
+    .header-img {
+        grid-area: img;
+        content: url("/Assets/HeroImgDesktop.png");
+        width: 50%;
+        place-self: center;
+    }
+
+    .header-title {
+        font-size: 3.2rem;
+        grid-area: auto;
+    }
+
+    .header-paraph {
+        grid-area: auto;
+    }
+
+    .header-buttons {
+        grid-area: auto;
+    }
+
+    .header-comments {
+        grid-area: auto;
+    }
+
+    .features-title {
+        width: 30%;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-gap: 5rem;
+    }
+
+    .comments-container .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
