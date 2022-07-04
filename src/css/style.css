@@ -74,7 +74,7 @@ body {
     font-size: 1rem;
     margin: .5rem;
     border-radius: 5px;
-    padding: 1rem 2rem;
+    padding: .8rem 1.6rem;
     background-color: #3180f5;
     width: fit-content;
     transition: .4s;
@@ -468,19 +468,23 @@ body {
             "paraph img"
             "buttons img"
             "comments img";
-        padding: 1rem 3rem;
+        padding: 3rem 5rem;
     }
 
     .nav-container {
-        padding: 0 3rem;
+        padding: 0 5rem;
     }
 
     .features-container {
-        padding: 3rem;
+        padding: 10rem;
     }
 
     .comments-container {
-        padding: 3rem;
+        padding: 10rem;
+    }
+
+    .plans-container {
+        padding: 10rem;
     }
 
     .header-img {
