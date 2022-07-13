@@ -175,7 +175,7 @@ body {
 
 .features-title {
     color: #000;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .cards-container {
@@ -211,7 +211,7 @@ body {
 }
 
 .comments-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 .cards-container {
@@ -284,13 +284,13 @@ body {
 }
 
 .plans-title {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
 .plans-paraph {
-    font-size: 1.4rem;
-    max-width: 70%;
+    font-size: 1rem;
+    max-width: 100%;
     text-align: center;
     color: #666;
 }
@@ -301,6 +301,7 @@ body {
     background-color: #fbf8f3;
     border-radius: 10px;
     border: 1px solid #ffad23;
+    max-width: 400px;
 }
 
 .plans-card-title {
@@ -377,6 +378,7 @@ body {
     }
 
     .nav-link {
+        font-size: 1.2rem;
         width: max-content;
     }
 
@@ -395,7 +397,7 @@ body {
     }
 
     .header-title {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     .header-paraph {
@@ -417,7 +419,8 @@ body {
     }
 
     .features-title {
-        width: 60%;
+        font-size: 2.5rem;
+        width: 70%;
     }
 
     .card-title {
@@ -438,26 +441,29 @@ body {
         overflow: hidden;
     }
 
+    .comments-title {
+        font-size: 2.5rem;
+    }
+
     .comment-card {
         height: fit-content;
         min-width: 50%;
     }
 
     .plans-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .plans-paraph {
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1.7em;
-    }
-
-    .plans-card {
-        max-width: 60%;
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
+    .nav-logo {
+        font-size: 2rem
+    }
 
     .header-container {
         display: grid;
@@ -468,7 +474,7 @@ body {
             "paraph img"
             "buttons img"
             "comments img";
-        padding: 3rem 5rem;
+        padding: 5rem 10rem;
     }
 
     .nav-container {
@@ -476,15 +482,80 @@ body {
     }
 
     .features-container {
-        padding: 10rem;
+        padding: 5rem 5rem;
     }
 
     .comments-container {
-        padding: 10rem;
+        padding: 5rem 5rem;
     }
 
-    .plans-container {
-        padding: 10rem;
+    .header-img {
+        grid-area: img;
+        content: url("/Assets/HeroImgDesktop.png");
+        width: 70%;
+        place-self: center;
+    }
+
+    .header-title {
+        font-size: 3.2rem;
+        grid-area: auto;
+    }
+
+    .header-paraph {
+        grid-area: auto;
+    }
+
+    .comments-title, .features-title {
+        font-size: 3.2rem;
+    }
+
+    .header-buttons {
+        grid-area: auto;
+    }
+
+    .header-comments {
+        grid-area: auto;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-gap: 5rem;
+    }
+
+    .comments-container .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1540px) {
+
+    .nav-logo {
+        font-size: 2rem
+    }
+
+    .header-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "title img"
+            "paraph img"
+            "buttons img"
+            "comments img";
+        padding: 5rem 10rem;
+    }
+
+    .nav-container {
+        padding: 0 5rem;
+    }
+
+    .features-container {
+        padding: 5rem 15rem;
+    }
+
+    .comments-container {
+        padding: 5rem 15rem;
     }
 
     .header-img {
@@ -503,16 +574,16 @@ body {
         grid-area: auto;
     }
 
+    .comments-title, .features-title {
+        font-size: 3.2rem;
+    }
+
     .header-buttons {
         grid-area: auto;
     }
 
     .header-comments {
         grid-area: auto;
-    }
-
-    .features-title {
-        width: 30%;
     }
 
     .cards-container {
